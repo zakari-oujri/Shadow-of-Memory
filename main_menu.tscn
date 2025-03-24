@@ -1,0 +1,106 @@
+[gd_scene load_steps=11 format=3 uid="uid://chhgbs4td0jme"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_06t4h"]
+[ext_resource type="Texture2D" path="res://huDiDyr.jpg" id="2_glbon"]
+[ext_resource type="Shader" uid="uid://bx30l3lklebgm" path="res://scroll.gdshader" id="3_nlkkf"]
+[ext_resource type="Texture2D" path="res://R.png" id="4_qe12f"]
+[ext_resource type="FontFile" path="res://MorrisRoman-Black.ttf" id="5_8qtwp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dy7ct"]
+shader = ExtResource("3_nlkkf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_glbon"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nlkkf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qe12f"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8qtwp"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_06t4h")
+
+[node name="MainBackground" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_glbon")
+expand_mode = 2
+
+[node name="Pattern" type="TextureRect" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_dy7ct")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_qe12f")
+expand_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_top = -255.0
+offset_right = 48.0
+offset_bottom = -119.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Start Game" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_8qtwp")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxTexture_glbon")
+text = "Start Game"
+
+[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_8qtwp")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_nlkkf")
+text = "Options"
+
+[node name="Extras" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_8qtwp")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_qe12f")
+text = "Extras"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_8qtwp")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_8qtwp")
+text = "Quit"
+
+[node name="GameTitle" type="Label" parent="."]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 100
+text = "Shadow of Memory"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Start Game" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Extras" to="." method="_on_extras_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
