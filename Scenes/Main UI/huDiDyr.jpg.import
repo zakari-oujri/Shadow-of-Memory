@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwpxu2im0u3fa"
-path="res://.godot/imported/R.png-2f149dc02f10b4ba73e67647338384b8.ctex"
+uid="uid://hsh2db5411ce"
+path="res://.godot/imported/huDiDyr.jpg-be2120275e905de4dbd1afd4809e6ce8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://R.png"
-dest_files=["res://.godot/imported/R.png-2f149dc02f10b4ba73e67647338384b8.ctex"]
+source_file="res://Scenes/Main UI/huDiDyr.jpg"
+dest_files=["res://.godot/imported/huDiDyr.jpg-be2120275e905de4dbd1afd4809e6ce8.ctex"]
 
 [params]
 
