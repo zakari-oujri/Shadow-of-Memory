@@ -11,7 +11,6 @@ config_version=5
 [application]
 
 config/name="Shadow-of-Memory"
-run/main_scene="uid://b06q1ka3065ju"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://Scenes/Main UI/icon.svg"
 
