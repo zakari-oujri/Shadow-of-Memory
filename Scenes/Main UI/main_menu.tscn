@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://chhgbs4td0jme"]
+[gd_scene load_steps=10 format=3 uid="uid://cebj1kmyheyfo"]
 
 [ext_resource type="Texture2D" uid="uid://hsh2db5411ce" path="res://Scenes/Main UI/huDiDyr.jpg" id="1_fu7sn"]
-[ext_resource type="Script" uid="uid://dgwos6vhwivh5" path="res://main_menu.gd" id="1_glbon"]
 [ext_resource type="Texture2D" uid="uid://bwpxu2im0u3fa" path="res://Scenes/Main UI/R.png" id="3_jix8l"]
-[ext_resource type="Shader" uid="uid://bx30l3lklebgm" path="res://scroll.gdshader" id="3_nlkkf"]
+[ext_resource type="Shader" uid="uid://bx30l3lklebgm" path="res://Scenes/Main UI/scroll.gdshader" id="3_nlkkf"]
 [ext_resource type="FontFile" uid="uid://bj2l3x1odioq5" path="res://Fonts/MorrisRoman-Black.ttf" id="5_nlkkf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dy7ct"]
@@ -24,7 +23,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_glbon")
 
 [node name="MainBackground" type="TextureRect" parent="."]
 layout_mode = 1
@@ -94,11 +92,18 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_8qtwp")
 text = "Quit"
 
 [node name="GameTitle" type="Label" parent="."]
-layout_mode = 0
-offset_right = 934.0
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
 offset_bottom = 137.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0.45098, 1)
+theme_override_constants/shadow_offset_y = 28
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 22
 theme_override_font_sizes/font_size = 100
 text = "Shadow of Memory"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Start Game" to="." method="_on_start_game_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
