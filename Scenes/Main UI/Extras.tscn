@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://btxsdkfn1r7mc"]
 
-[ext_resource type="Script" uid="uid://dio8u4fqdqjfb" path="res://Scenes/Main UI/options.gd" id="1_nygck"]
+[ext_resource type="Script" uid="uid://cbpkelapomwr5" path="res://Scenes/Main UI/extras.gd" id="1_nygck"]
 [ext_resource type="Texture2D" uid="uid://hsh2db5411ce" path="res://Scenes/Main UI/huDiDyr.jpg" id="2_twsld"]
 [ext_resource type="Shader" uid="uid://cus7e6j1orgd4" path="res://Scenes/Main UI/scroll.gdshader" id="3_mi2wu"]
 [ext_resource type="Texture2D" uid="uid://bwpxu2im0u3fa" path="res://Scenes/Main UI/R.png" id="4_uykfo"]
@@ -83,4 +83,4 @@ theme_override_fonts/font = ExtResource("6_d775c")
 theme_override_font_sizes/font_size = 100
 text = "Extras"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
